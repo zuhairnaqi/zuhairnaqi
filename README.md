@@ -8,7 +8,7 @@
 - :soccer: Love to play soccer, table-tennis and swimming.
 - 📫 Reach me at: 
    github /zuhairnaqi,
-  facebook /zuhairnaqi9
+  linkedin /zuhairnaqi
 
 <!---
 zuhairnaqi/zuhairnaqi is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
