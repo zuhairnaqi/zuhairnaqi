@@ -1,0 +1,26 @@
+.me-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20%;
+}
+.me-left-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+}
+.profile-img {
+    width: 210px;
+    height: 200px;
+    border-radius: 10px;
+}
+.heading {
+    font-size: 2rem;
+    font-family: sans-serif;
+}
+.me-description {
+    color: #617b9a;
+    font-family: monospace;
+    font-size: 18px;
+}
