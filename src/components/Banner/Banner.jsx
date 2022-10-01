@@ -5,6 +5,7 @@ import CloudImg from '../../assets/images/cloud.png'
 
 export default function Banner() {
     const subTitleRef = useRef()
+    const blinkingCursorRef = useRef()
     const intervalRef = useRef()
 
     useEffect(() => {
@@ -16,8 +17,8 @@ export default function Banner() {
         const sentence = '> A SOFTWARE ENGINEER'
         let currentIndex = 0
         intervalRef.current = setInterval(() => {
-            subTitleRef.current.innerText = sentence.substring(0, currentIndex + 1)
             ++currentIndex
+            subTitleRef.current.innerText = sentence.substring(0, currentIndex)
             if (!sentence[currentIndex]) {
                 clearInterval(intervalRef.current)
                 startBlinkingCursor()
@@ -26,14 +27,8 @@ export default function Banner() {
     }
 
     const startBlinkingCursor = () => {
-        let addUnderScore = true
         intervalRef.current = setInterval(() => {
-            if (addUnderScore) {
-                subTitleRef.current.innerText += '_'
-            } else {
-                subTitleRef.current.innerText = subTitleRef.current.innerText.slice(0, -1)
-            }
-            addUnderScore = !addUnderScore
+            blinkingCursorRef.current.classList.toggle('hide-element')
         }, 500)
     }
 
@@ -44,7 +39,10 @@ export default function Banner() {
             <img src={CloudImg} className='cloud-img cloud-2' />
             <img src={CloudImg} className='cloud-img cloud-3' />
             <h1 className='title'>Zuhair Naqi</h1>
-            <h1 className='sub-title' ref={subTitleRef}></h1>
+            <div className='sub-title-container'>
+                <h1 className='sub-title' ref={subTitleRef}></h1>
+                <h1 className='sub-title hide-element' ref={blinkingCursorRef}>_</h1>
+            </div>
         </div>
     )
 }

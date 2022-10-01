@@ -36,7 +36,10 @@
     font-size: 4rem;
     font-family: cursive;
 }
+.sub-title-container {
+    display: flex;
+    width: 350px;
+}
 .sub-title {
     font-family: monospace;
-    width: 350px;
 }
