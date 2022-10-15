@@ -3,6 +3,7 @@
   "private": true,
   "description": "Zuhair Naqi's Website",
   "version": "0.1.0",
+  "homepage": "https://zuhairnaqi.github.io/",
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
@@ -11,15 +12,20 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d public"
   },
   "dependencies": {
     "gatsby": "^4.23.1",
+    "gatsby-plugin-use-dark-mode": "^1.5.0",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "gh-pages": "^4.0.0"
   },
   "repository": {
     "type": "git",
