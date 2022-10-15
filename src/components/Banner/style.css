@@ -6,6 +6,9 @@
     /* background-image: radial-gradient(circle, rgb(32, 32, 71) 0px, rgb(2, 9, 23) 100%); */
     color: white;
 }
+body.dark-mode .banner-container {
+    background-image: radial-gradient(circle, rgb(27, 27, 54) 0px, rgb(2, 9, 23) 100%);
+}
 .plan-img {
     width: 300px;
     height: 200px;

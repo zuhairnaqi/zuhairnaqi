@@ -1,12 +1,15 @@
 import React, { useEffect, useRef } from 'react'
+import useDarkMode from 'use-dark-mode';
 import './style.css'
 import PlanGif from '../../assets/images/plan.gif'
 import CloudImg from '../../assets/images/cloud.png'
+import ThemeToggler from '../ThemeToggler/ThemeToggler';
 
 export default function Banner() {
     const subTitleRef = useRef()
     const blinkingCursorRef = useRef()
     const intervalRef = useRef()
+    const darkMode = useDarkMode()
 
     useEffect(() => {
         startTypingTitle()
@@ -34,10 +37,13 @@ export default function Banner() {
 
     return (
         <div className='banner-container center-content'>
+            <ThemeToggler />
             <img src={PlanGif} className='plan-img' />
-            <img src={CloudImg} className='cloud-img cloud-1' />
-            <img src={CloudImg} className='cloud-img cloud-2' />
-            <img src={CloudImg} className='cloud-img cloud-3' />
+            {!darkMode.value && <>
+                <img src={CloudImg} className='cloud-img cloud-1' />
+                <img src={CloudImg} className='cloud-img cloud-2' />
+                <img src={CloudImg} className='cloud-img cloud-3' />
+            </>}
             <h1 className='title'>Zuhair Naqi</h1>
             <div className='sub-title-container'>
                 <h1 className='sub-title' ref={subTitleRef}></h1>
